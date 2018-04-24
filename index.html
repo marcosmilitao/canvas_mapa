@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="handlebars-v4.0.10.js"> -->
+    <!-- <script src="lib/handlebars.runtime.js"></script> -->
+    <script src="js/handlebars.runtime-7b74175.js"></script>
+    <script src="js/handlebars.min-7b74175.js"></script>
+    <script src="js/data-indiceCriminal.js"></script>
+    <script src="js/mapa.js"></script>
+</head>
+
+<body>
+    <!-- <script id="card-template" type="text/x-handlebars-template">
+        <ul class="rangeicg-ranking">
+            {{#maisViolentas}}
+            <li class="rangeicg-card">
+                <a data-toggle="modal" data-target="#modalIcg" data-linkiframe={{linkIframeCard}}>
+                    <h3 class="rangeicg-card-title">{{rank}}&nbsp;{{year}}<strong>ICG <span>{{icg}}</span></strong></h3>
+                    <figure>
+                        <img src={{imgMunicipio}} alt="Silueta do município {{nameMunicipio}}">
+                        <figcaption class="rangeicg-card--title-municipio">{{nameMunicipio}}</figcaption>
+                    </figure>
+                    <span class="rangeicg-card-btn">detalhar índice</span>
+                </a>
+            </li>
+            {{/maisViolentas}}
+        </ul>
+    </script>
+    <div id="cardsMaisViolentas" class="wrap-cards"></div> -->
+    <!-- / rangeicg ranking  -->
+
+    <!--
+    Exemplo aqui gerando um svg
+  -->
+
+    <!-- generate svg  -->
+    <!-- $(this).attr('d') -->
+
+    <script id="municipios-rj" type="text/x-handlebars-template">
+
+        <svg class="maprio" x="0px" y="0px" viewBox="0 0 271000 194640" width="100%" height="100%">
+            <g id="municipios-rj--group">
+                {{#countiesRJ}}
+                <path d="{{path}}" stroke="#fff" stroke-width="500" data-nameSvg="{{name}}" fill="{{color}}" data-toggle="modal" data-target="#modalIcg"
+                /> {{/countiesRJ}}
+            </g>
+        </svg>
+
+    </script>
+    <span class="titulos col-sm-4">Municipio</span>
+    <br>
+
+    <div class="titulos col-sm-4" id="dados_cidade"> </div>
+    <br><br>
+    <span class="titulos col-sm-4">TOTAL DE COMUNICAÇÕES</span>
+    <br><br>
+    <span class="titulos col-sm-4">PERCENTUAL DO ESTADO</span>
+    <br><br>
+    <div class="row-fluid">
+        <div class="span5">
+            <div id="wrap-maprj"></div>
+
+        </div>
+        <div class="span7">
+
+            <div id="municipio">
+
+
+                
+                <svg version="1.1" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 500 300" enable-background="new 0 0 500 300" xml:space="preserve" width="250" height="150" viewBox="0 0 271000 194300" >
+                    <path id="idMunicipio" d='M176910 148832l2305 -1502 3388 -6390 2270 -1886 5901 7403 1223 2654 -1153 4924 -314 140 -454 -384 -559 349 -943 -489 -733 314 -733 -209 -454 279 -245 384 280 978 -245 1153 -384 523 -594 -104 -1781 -1013 -1222 -1397 -698 210 -489 -140 -734 349 140 -1641 1292 -1956 -1012 -1781 -559 -489 244 -209 -454 -838 -349 349 -2934 419z'>
+                    </g>
+
+                </svg>
+                
+                
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>
+        c();
+    </script>
+
+</body>
+
+</html>
